@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Colombo Cricket Club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('images/cover.jpg') center/cover no-repeat;
+      padding: 150px 0 80px;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 4rem auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--border-color);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--bg-color);
+      border: 4px solid var(--accent-color);
+      top: 25px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left { left: 0; }
+    .right { left: 50%; }
+    .right::after { left: -10px; }
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: var(--bg-card);
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+    .timeline-content h3 { color: var(--accent-color); margin-bottom: 0.5rem; font-size: 1.5rem; }
+    
+    @media screen and (max-width: 600px) {
+      .timeline::after { left: 31px; }
+      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+      .timeline-item::after { left: 21px; }
+      .right { left: 0%; }
+    }
+
+    /* Vision Mission */
+    .vision-mission {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .vm-card {
+      background: var(--bg-card);
+      padding: 3rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    .vm-card h2 { color: var(--accent-color); margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="media.html">Media</a>
+        <a href="staff.html">Staff</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our History</h1>
+      <p>Decades of dominance in Sri Lankan cricket.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="container">
+    <h2 class="section-title">The Legacy</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1892 - The Foundation</h3>
+          <p>Established as an exclusive sports club for cricket enthusiasts, paving the way for structured tournaments in the nation.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>1930s - Golden Era Beginnings</h3>
+          <p>Entered the top-flight domestic league, securing back-to-back major regional championships.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1981 - International Recognition</h3>
+          <p>Produced highly skilled players who represented the national side during their inaugural Test match.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2020s - Modern Dominance</h3>
+          <p>Reconstructed world-class training facilities and clinched the Major Club T20 Championship.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision & Mission -->
+    <div class="vision-mission">
+      <div class="vm-card">
+        <h2>Our Vision</h2>
+        <p>To be the driving force behind Sri Lanka's international cricket resurgence, fostering an environment where elite talent is nurtured, and sporting excellence is celebrated on a global stage.</p>
+      </div>
+      <div class="vm-card">
+        <h2>Our Mission</h2>
+        <p>To provide cutting-edge facilities, unparalleled coaching, and competitive pathways for athletes while upholding the rich traditions and integrity of the gentleman's game.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
