@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombo Cricket Club (CCC) | Home</title>
+  <meta name="description" content="Welcome to the Colombo Cricket Club (CCC) – Sri Lanka's premium international-level cricket organization. Discover our squad, fixtures, and elite coaching programs.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Home Specific Styles */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(3,7,18,0.7) 0%, rgba(3,7,18,0.4) 50%, rgba(3,7,18,0.9) 100%), url('images/cover.jpg') center bottom/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 80px; /* Offset for header */
+    }
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .hero-content h1 {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+    .hero-content .tagline {
+      font-size: 1.6rem;
+      color: var(--accent-color);
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 5px 15px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1);
+    }
+    
+    /* Intro Section */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .intro-img {
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(229, 57, 53, 0.2);
+    }
+
+    /* Shared Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .player-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    .player-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .player-info h3 {
+      font-size: 1.5rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+    .player-info p {
+      color: var(--accent-color);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    /* Fixed Aspect Cards */
+    .fixture-card {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(145deg, var(--bg-card), rgba(0,0,0,0.8));
+    }
+    .teams {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .vs { color: var(--accent-color); }
+    .match-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      background: linear-gradient(to right, #050505, #140505, #050505);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .stats-grid {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .stat-box h2 {
+      font-size: 4rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px rgba(229,57,53,0.4);
+    }
+    .stat-box p {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      background: url('images/player_action.png') center/cover no-repeat;
+      position: relative;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(5,5,5,0.85);
+      z-index: 1;
+    }
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media(max-width: 900px) {
+      .hero-content h1 { font-size: 3rem; }
+      .intro-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="media.html">Media</a>
+        <a href="staff.html">Staff</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Colombo Cricket Club</h1>
+      <p class="tagline">Oldest Cricket Club In Sri Lanka</p>
+      <a href="staff.html" class="btn btn-primary">Meet Our Staff</a>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="container" style="padding-top: 8rem;">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2 class="section-title" style="text-align: left;">Excellence on the Pitch</h2>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-muted);">
+          Founded with a relentless drive for performance, Colombo Cricket Club stands at the pinnacle of domestic and international standard cricket in Sri Lanka. 
+        </p>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">
+          Our cutting-edge facilities, world-renowned coaching frameworks, and dominant player roster make us more than a club—we are an institution.
+        </p>
+        <a href="about.html" class="btn btn-outline">Read Our History</a>
+      </div>
+      <div>
+        <img src="images/player_action.png" alt="Dynamic Cricket Action" class="intro-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Players -->
+  <section class="container">
+    <h2 class="section-title">Featured Players</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(4, 1fr);" id="featured-players-grid">
+      <!-- Featured players will be populated via players.js -->
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="players.html" class="btn btn-outline">View Full Squad</a>
+    </div>
+  </section>
+
+  <!-- Key Stats -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-box">
+        <h2>130+</h2>
+        <p>Years of Legacy</p>
+      </div>
+      <div class="stat-box">
+        <h2>15</h2>
+        <p>National Trophies</p>
+      </div>
+      <div class="stat-box">
+        <h2>45</h2>
+        <p>International Caps</p>
+      </div>
+      <div class="stat-box">
+        <h2>3</h2>
+        <p>Elite Academies</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Fixtures -->
+  <section class="container">
+    <h2 class="section-title">Latest Fixtures</h2>
+    <div class="card-grid">
+      <div class="card fixture-card">
+        <p class="match-date">Fri, 15 May • 14:00 LKT • T20 Major League</p>
+        <div class="teams">
+           <span>Baduraliya CC</span> <span class="vs">VS</span> <span>CCC</span>
+        </div>
+        <a href="matches.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Match Center</a>
+      </div>
+      <div class="card fixture-card">
+        <p class="match-date">Sun, 17 May • 09:45 LKT • T20 Major League</p>
+        <div class="teams">
+           <span>Kurunegala YCC</span> <span class="vs">VS</span> <span>CCC</span>
+        </div>
+        <a href="matches.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Match Center</a>
+      </div>
+      <div class="card fixture-card">
+        <p class="match-date">Tue, 19 May • 09:45 LKT • T20 Major League</p>
+        <div class="teams">
+           <span>CCC</span> <span class="vs">VS</span> <span>Nugegoda S & WC</span>
+        </div>
+        <a href="matches.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Match Center</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2 style="font-size: 3rem; margin-bottom: 1rem;">Train Like a Pro</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">Ready to elevate your game? Join our elite coaching programs designed by international legends.</p>
+      <a href="contact.html" class="btn btn-primary">Inquire Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/players.js"></script>
+</body>
+</html>
