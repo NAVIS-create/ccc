@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matches | Colombo Cricket Club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('images/cover.jpg') center/cover no-repeat;
+      padding: 150px 0 80px;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .match-list {
+      max-width: 900px;
+      margin: 0 auto 5rem;
+    }
+    .match-row {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all var(--transition-fast);
+    }
+    .match-row:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+    .match-info { flex: 1; }
+    .match-date { color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+    .match-teams { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .match-venue { color: var(--text-muted); font-size: 0.9rem; }
+    .match-result { text-align: right; }
+    .score { font-size: 1.2rem; font-weight: bold; color: var(--text-main); margin-bottom: 0.5rem; }
+    .status {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .status.won { background: rgba(229, 57, 53, 0.2); color: var(--accent-color); }
+    .status.upcoming { background: rgba(255, 255, 255, 0.1); color: var(--text-main); }
+    .status.lost { background: rgba(255, 50, 50, 0.2); color: #ff5252; }
+
+    @media (max-width: 700px) {
+      .match-row { flex-direction: column; text-align: center; gap: 1.5rem; }
+      .match-result { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html" class="active">Matches</a>
+        <a href="media.html">Media</a>
+        <a href="staff.html">Staff</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Fixtures & Results</h1>
+      <p>Follow the club's campaign across all formats.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <select id="tournament-filter" class="form-control" style="max-width: 300px; margin: 0 auto; display: inline-block; font-family: var(--font-heading); font-weight: bold; border-radius: 30px; border-color: var(--accent-color); cursor: pointer;">
+        <option value="all">Default (All Formats)</option>
+        <option value="t20">Major Club T20</option>
+        <option value="limited_over">Major Club Limited Over</option>
+        <option value="3day">Major Club 3 Day</option>
+      </select>
+    </div>
+
+    <h2 class="section-title">Upcoming Fixtures</h2>
+    <div class="match-list" id="upcoming-list">
+      <!-- Injected via matches.js -->
+      
+    </div>
+
+    <h2 class="section-title">Past Results</h2>
+    <div class="match-list" id="past-list">
+      <!-- Injected via matches.js -->
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/matches.js"></script>
+</body>
+</html>
