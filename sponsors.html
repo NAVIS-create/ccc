@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors | Colombo Cricket Club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('images/cover.jpg') center/cover no-repeat;
+      padding: 150px 0 80px;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .sponsor-tier {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+    .sponsor-tier h2 {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+    }
+    .sponsor-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      align-items: center;
+    }
+    .sponsor-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 3rem;
+      border-radius: 8px;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 150px;
+    }
+    .sponsor-box:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 20px var(--accent-glow);
+      transform: translateY(-5px);
+    }
+    .sponsor-name {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .sponsor-logo-placeholder {
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+
+    /* Principal Sponsor is larger */
+    .principal .sponsor-box {
+      width: 350px;
+      height: 200px;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 10px rgba(229, 57, 53, 0.1);
+    }
+    .principal .sponsor-name { font-size: 2rem; color: var(--accent-color); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="media.html">Media</a>
+        <a href="staff.html">Staff</a>
+        <a href="sponsors.html" class="active">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Partners</h1>
+      <p>The brands powering the future of CCC.</p>
+    </div>
+  </section>
+
+  <section class="container" style="margin-top: 3rem;">
+
+    <div class="sponsor-tier">
+      <h2>Official Sponsors</h2>
+      <div class="sponsor-grid">
+        <a href="https://www.instagram.com/gordone.srilanka/" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+          <div class="sponsor-box">
+            <span class="sponsor-name" style="text-align: center;">GORDONE<br><span style="color:var(--text-muted); font-size:1rem;">SRI LANKA</span></span>
+          </div>
+        </a>
+        <a href="https://bluefort.lk/shop/" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+          <div class="sponsor-box">
+            <span class="sponsor-name">BLUEFORT</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 5rem; padding: 4rem; background: var(--bg-card); border-radius: 8px; border: 1px dashed var(--border-color);">
+      <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Partner With Us</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Align your brand with Sri Lanka's most successful domestic cricket franchise and gain unrivaled exposure.</p>
+      <a href="contact.html" class="btn btn-primary">Become a Sponsor</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
