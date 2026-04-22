@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff | Colombo Cricket Club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('images/cover.jpg') center/cover no-repeat;
+      padding: 150px 0 80px;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .program-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transition: transform var(--transition-smooth);
+      transform-origin: left;
+    }
+    .program-card:hover::before {
+      transform: scaleX(1);
+    }
+    .program-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    .program-card p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* Skills section */
+    .skills-section {
+      background: var(--bg-subtle);
+      padding: 5rem 0;
+      margin-top: 5rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .skills-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .skills-list li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .skills-list h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .skills-list p { color: var(--text-muted); font-size: 0.95rem; }
+
+    @media (max-width: 800px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="media.html">Media</a>
+        <a href="staff.html" class="active">Staff</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Staff</h1>
+      <p>The technical and support team driving success on the field.</p>
+    </div>
+  </section>
+
+  <section class="container" style="margin-bottom: 5rem;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2 class="section-title">Technical Support & Management</h2>
+      <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
+        Meet the dedicated team that operates behind the scenes, ensuring our athletes reach peak performance.
+      </p>
+    </div>
+
+    <div class="program-grid">
+      
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/Lakshan_Sandakan.jpg" onerror="this.src='images/player_action.png'" alt="Lakshan Sandakan" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Lakshan Sandakan</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Head Coach</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/lasantha_jayawardena.jpg" onerror="this.src='images/player_action.png'" alt="Lasantha Jayawardena" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Lasantha Jayawardena</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Manager</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column; border-color: var(--accent-color); box-shadow: 0 0 15px rgba(229, 57, 53, 0.1);">
+        <img src="images/staff/navidu_wickramaarachchi.jpg" onerror="this.src='images/player_action.png'" alt="Navidu Wickramaarachchi" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Navidu Wickramaarachchi</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Analyst</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/yasaruwan_herath.jpg" onerror="this.src='images/player_action.png'" alt="Yasaruwan Herath" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Yasaruwan Herath</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Assistant Coach</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/sonal_dulshan.jpg" onerror="this.src='images/player_action.png'" alt="Sonal Dulshan" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Sonal Dulshan</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Assistant Coach</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/woshantha_silva.jpg" onerror="this.src='images/player_action.png'" alt="Woshantha Silva" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Woshantha Silva</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Assistant Coach</p>
+        </div>
+      </div>
+
+      <div class="program-card" style="padding: 0; display: flex; flex-direction: column;">
+        <img src="images/staff/manoj_jeewantha.jpg" onerror="this.src='images/player_action.png'" alt="Manoj Jeewantha" style="width: 100%; height: 320px; object-fit: cover; object-position: top;">
+        <div style="padding: 2rem;">
+          <h3 style="margin-bottom: 0.5rem;">Manoj Jeewantha</h3>
+          <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0;">Physiotherapist / Messure</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Executive Committee Section -->
+    <div style="text-align: center; max-width: 800px; margin: 4rem auto 2rem;">
+      <h2 class="section-title">Executive Committee</h2>
+      <p style="color: var(--text-muted); font-size: 1.1rem;">
+        The steering leadership guiding the Colombo Cricket Club's strategic vision, administration, and ongoing legacy.
+      </p>
+    </div>
+
+    <div class="program-grid">
+      <div class="program-card" style="border-color: var(--accent-color); box-shadow: 0 0 15px rgba(229, 57, 53, 0.1);">
+        <h3>Shammi Silva</h3>
+        <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem;">President</p>
+        <p>Leading the club with a bold vision for domestic dominance and international representation.</p>
+      </div>
+      <div class="program-card">
+        <h3>Mohan de Silva</h3>
+        <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem;">Vice President</p>
+        <p>Overseeing key developmental projects and club expansions.</p>
+      </div>
+      <div class="program-card">
+        <h3>Bandula Dissanayake</h3>
+        <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem;">General Secretary</p>
+        <p>Managing the core administration, member relations, and day-to-day governance.</p>
+      </div>
+      <div class="program-card">
+        <h3>Lasantha Gunaratne</h3>
+        <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem;">Treasurer</p>
+        <p>Directing financial strategy, sponsorships, and long-term sustainability.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
