@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Media | Colombo Cricket Club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('images/cover.jpg') center/cover no-repeat;
+      padding: 150px 0 80px;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* News Cards */
+    .news-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .news-content {
+      padding: 1.5rem;
+    }
+    .news-date {
+      color: var(--accent-color);
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .news-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .news-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    .gallery-item::after {
+      content: 'VIEW +';
+      position: absolute;
+      inset: 0;
+      background: rgba(229, 57, 53, 0.8);
+      color: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 5, 0.95);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast);
+    }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90vh;
+      box-shadow: 0 0 30px var(--accent-glow);
+      border: 2px solid var(--accent-color);
+      border-radius: 4px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 3rem;
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="matches.html">Matches</a>
+        <a href="media.html" class="active">Media</a>
+        <a href="staff.html">Staff</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>News & Media</h1>
+      <p>The latest updates, galleries, and highlights.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title" style="color: #ffd700; margin-bottom: 2rem; border-color: #ffd700;">Club Announcement</h2>
+    <div style="background: var(--bg-card); border: 1px solid var(--accent-color); border-radius: 12px; display: flex; flex-wrap: wrap; margin-bottom: 5rem; overflow: hidden; box-shadow: 0 0 25px rgba(229, 57, 53, 0.2);">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="images/ashan_farewell.jpg" alt="Coach Ashan Priyanjan Farewell" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; display: block; object-position: center top;">
+      </div>
+      <div style="flex: 2; padding: 3rem; min-width: 300px;">
+        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">Thank You, Coach Ashan Priyanjan</h3>
+        <p style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 1px;">A CCC Legend Moves to the National Stage</p>
+        <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem;">Since joining Colombo Cricket Club in 2016, you have been much more than just a player. You became the heart of this club. You led us with passion and pride, both as Captain and as Head Coach, and gave us so many proud moments.</p>
+        <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem;">You guided CCC to three consecutive Major Club 3-Day Championships as Captain, a record in Sri Lankan First-Class cricket, and then again to three more titles as Head Coach. These are achievements that will always be remembered at our club.</p>
+        <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem;">But more than the trophies, what we’ll remember most is your leadership, kindness, and professionalism. You treated everyone with respect and helped so many players grow — both on and off the field. We will miss your presence in the dressing room, your calm advice, and the positive energy you brought to the team every day. You truly showed what it means to represent CCC with pride.</p>
+        <p style="color: #fff; line-height: 1.8; margin-bottom: 2rem; font-weight: 500; font-size: 1.05rem;">As you begin your next chapter as Head Coach of the Sri Lanka Cricket Emerging Team, we are all so proud of you. It’s a big step forward, and we know you will continue to guide and inspire the next generation of Sri Lankan cricketers.</p>
+        <div style="background: rgba(255, 215, 0, 0.1); border-left: 4px solid #ffd700; padding: 1.5rem; border-radius: 0 8px 8px 0;">
+          <p style="color: #ffd700; font-style: italic; font-size: 1.15rem; margin: 0; line-height: 1.5;">💙 We wish you all the success, happiness, and blessings in your new journey ahead. Once a CCC legend, always a CCC legend. Farewell.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 5rem;">
+      <h2 class="section-title" style="margin-bottom: 2rem;">Connect with Us</h2>
+      <a href="https://www.facebook.com/profile.php?id=100087517644198" target="_blank" class="btn btn-outline" style="margin: 0 10px; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; font-weight: bold; width: 230px; justify-content: center;">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+        Official Facebook
+      </a>
+      <a href="https://www.instagram.com/colombo_cricket_club/" target="_blank" class="btn btn-outline" style="margin: 0 10px; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; font-weight: bold; width: 230px; justify-content: center;">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+        Official Instagram
+      </a>
+    </div>
+
+    <h2 class="section-title">Live Social Feeds</h2>
+    <div class="feed-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 5rem; width: 100%;">
+      
+      <!-- Facebook Feed -->
+      <div style="background: #fff; border-radius: 12px; padding: 10px; box-shadow: 0 0 25px rgba(229, 57, 53, 0.15); display: flex; justify-content: center; height: 600px;">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100087517644198&tabs=timeline&width=320&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="320" height="600" style="border:none;overflow:hidden; border-radius: 8px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+
+      <!-- Instagram Feed Placeholder -->
+      <div style="background: var(--bg-card); border: 1px solid var(--accent-color); border-radius: 12px; padding: 2rem; box-shadow: 0 0 25px rgba(229, 57, 53, 0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 600px;">
+        <svg fill="#E1306C" viewBox="0 0 24 24" width="80" height="80" style="margin-bottom: 1.5rem;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+        <h3 style="color: #fff; margin-bottom: 1rem; font-size: 1.5rem;">Instagram</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">Follow us on Instagram for the latest training highlights, match day stories, and behind-the-scenes action!</p>
+        <a href="https://www.instagram.com/colombo_cricket_club/" target="_blank" class="btn btn-outline" style="border-radius: 30px; border-color: #E1306C; color: #E1306C; font-weight: bold;">View IG Profile</a>
+      </div>
+
+      <!-- TikTok Feed -->
+      <div style="background: #fff; border-radius: 12px; padding: 10px; box-shadow: 0 0 25px rgba(229, 57, 53, 0.15); display: flex; justify-content: center; height: 600px; overflow-y: auto;">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@colombocricketclub?lang=en" data-unique-id="colombocricketclub" data-embed-type="creator" style="max-width: 320px; min-width: 320px; outline: none; border: none; margin: 0;" >
+          <section><a target="_blank" href="https://www.tiktok.com/@colombocricketclub?lang=en">Loading TikTok Feed...</a></section>
+        </blockquote> 
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+
+    <h2 class="section-title">Photo Gallery</h2>
+    <div class="gallery-grid" style="gap: 2rem;">
+      <div>
+        <div class="gallery-item"><img src="images/u23_champions_2025.jpg" alt="U23 Joint Champions 2025"></div>
+        <h4 style="color: var(--accent-color); margin-top: 1rem; font-size: 1.15rem; text-align: center; font-weight: bold; text-transform: uppercase;">U23 Joint Champions 2025</h4>
+      </div>
+      <div>
+        <div class="gallery-item"><img src="images/t20_champions_2025.png" alt="Major Club T20 Champions 2025"></div>
+        <h4 style="color: var(--accent-color); margin-top: 1rem; font-size: 1.15rem; text-align: center; font-weight: bold; text-transform: uppercase;">Major Club T20 Champions 2025</h4>
+      </div>
+      <div>
+        <div class="gallery-item"><img src="images/limited_over_champions_2025.jpg" alt="Major Club 50 Over Champions 2025"></div>
+        <h4 style="color: var(--accent-color); margin-top: 1rem; font-size: 1.15rem; text-align: center; font-weight: bold; text-transform: uppercase;">Major Club 50 Over Champions 2025</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="Popup Image" id="lightbox-img">
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;"><img src="images/logo.png" alt="CCC Logo" class="logo-img"></a>
+          <p>The premier cricket club in Sri Lanka. Forging international champions since 1892.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our History</a></li>
+            <li><a href="players.html">Squad</a></li>
+            <li><a href="matches.html">Fixtures & Results</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="media.html">News & Media</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Reach Out</a></li>
+            <li>Colombo 07, Sri Lanka</li>
+            <li>info@ccc-cricket.lk</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Colombo Cricket Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
